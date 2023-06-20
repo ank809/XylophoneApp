@@ -11,6 +11,18 @@ class MyApp extends StatelessWidget {
     final player= AudioPlayer();
             player.play(AssetSource('note$soundNumber.wav')); 
   }
+  Expanded buildkey ( Color color, int soundno, ){
+       return Expanded(
+            child: ElevatedButton(
+              style: ButtonStyle(backgroundColor: MaterialStatePropertyAll<Color>(color)),
+              onPressed: (){
+              sound(soundno);
+            },
+             child: Text('Click Me $soundno', style: TextStyle(fontWeight: FontWeight.bold, decorationColor: Colors.blueAccent),),
+            
+             ),
+             );
+  }
   const MyApp({super.key});
 
   @override
@@ -28,85 +40,14 @@ class MyApp extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-          Expanded(
-            child: ElevatedButton(
-              onPressed: (){
-              sound(1);
-            },
-             child: Text('Click Me 1'),
-             style: ButtonStyle(backgroundColor: 
-             MaterialStatePropertyAll(
-              Colors.amber
-             ),
-             ),
-            ),
-          ),
-          Expanded(
-            child: ElevatedButton(onPressed: (){
-              sound(2);
-            }, child: Text('Click Me 2'),
-            style: ButtonStyle(backgroundColor: 
-             MaterialStatePropertyAll(
-              Colors.orange
-             ),
-             ),
-            ),
-          ),
-          Expanded(
-            child: ElevatedButton(onPressed: (){
-              sound(3);
-            }, child: Text('Click Me 3'),
-            style: ButtonStyle(backgroundColor: 
-             MaterialStatePropertyAll(
-              Colors.blue
-             ),
-             ),
-            ),
-          ),
-          Expanded(
-            child: ElevatedButton(onPressed: (){
-              sound(4); 
-            }, child: Text('Click Me 4'),
-            style: ButtonStyle(backgroundColor: 
-             MaterialStatePropertyAll(
-              Colors.purple
-             ),
-             ),
-            ),
-          ),
-        Expanded(
-          child: ElevatedButton(onPressed: (){
-             sound(5);
-            }, child: Text('Click Me 5'),
-            style: ButtonStyle(backgroundColor: 
-             MaterialStatePropertyAll(
-              Colors.pink
-             ),
-             ),
-            ),
-        ),
-          Expanded(
-            child: ElevatedButton(onPressed: (){
-            sound(6);
-            }, child: Text('Click Me 6'),
-            style: ButtonStyle(backgroundColor: 
-             MaterialStatePropertyAll(
-              Colors.brown
-             ),
-             ),
-            ),
-          ),
-          Expanded(
-            child: ElevatedButton(onPressed: (){
-              sound(7);
-            }, child: Text('Click Me 7'),
-            style: ButtonStyle(backgroundColor: 
-             MaterialStatePropertyAll(
-              Colors.greenAccent
-             ),
-             ),
-            ),
-          ),
+         buildkey(Colors.red, 1),
+         buildkey(Colors.amber, 2),
+         buildkey(Colors.pink, 3),
+         buildkey(Colors.purple, 4),
+         buildkey(const Color.fromARGB(255, 129, 84, 17), 5),
+         buildkey(Color.fromARGB(255, 6, 41, 54), 6),
+         buildkey(Colors.green, 7),
+          
           ],
         ),
       ),
