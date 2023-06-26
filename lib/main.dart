@@ -41,8 +41,8 @@ class MyApp extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
          buildkey(Colors.red, 1),
-         buildkey(Colors.amber, 2),
-         buildkey(Colors.pink, 3),
+         buildkey(Color.fromARGB(255, 106, 23, 70), 2),
+         buildkey(Colors.yellow, 3),
          buildkey(Colors.purple, 4),
          buildkey(const Color.fromARGB(255, 129, 84, 17), 5),
          buildkey(Color.fromARGB(255, 6, 41, 54), 6),
