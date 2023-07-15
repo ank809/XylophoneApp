@@ -40,13 +40,13 @@ class MyApp extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-         buildkey(Colors.red, 1),
-         buildkey(Color.fromARGB(255, 106, 23, 70), 2),
+         buildkey(Color.fromARGB(255, 205, 44, 178), 1),
+         buildkey(Color.fromARGB(255, 39, 107, 185), 2),
          buildkey(Colors.yellow, 3),
-         buildkey(Colors.purple, 4),
+         buildkey(const Color.fromARGB(255, 99, 23, 113), 4),
          buildkey(const Color.fromARGB(255, 129, 84, 17), 5),
-         buildkey(Color.fromARGB(255, 6, 41, 54), 6),
-         buildkey(Colors.green, 7),
+         buildkey(Color.fromARGB(255, 11, 101, 2), 6),
+         buildkey(Color.fromARGB(255, 165, 25, 25), 7),
           
           ],
         ),
